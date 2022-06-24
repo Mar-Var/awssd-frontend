@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Input from './Input';
 import ListTodo from './ListTodo';
-/* import {publicIpv4,} from 'public-ip'; */
-var ip = require('ip');
 axios.defaults.baseURL=process.env.BASEURL||"http://52.87.164.240:5000"
 
-let myIp =ip.address()
-
+let myIp ="Server "
 class Todo extends Component {
   state = {
     todos: [],

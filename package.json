@@ -10,6 +10,7 @@
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "ip": "^1.1.8",
+    "local-ip-address": "^1.0.0",
     "public-ip": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
