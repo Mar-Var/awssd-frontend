@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Input from './Input';
 import ListTodo from './ListTodo';
+import {publicIpv4,} from 'public-ip';
 axios.defaults.baseURL=process.env.BASEURL||"http://52.87.164.240:5000"
 
+let myIp =''
+publicIpv4().then((id)=>myIp=id)
 
 class Todo extends Component {
   state = {
@@ -16,6 +19,7 @@ class Todo extends Component {
   }
 
   getTodos = () => {
+
     axios
       .get('/api/todos')
       .then((res) => {
@@ -44,7 +48,7 @@ class Todo extends Component {
 
     return (
       <div>
-        <h1>My Todo(s) </h1>
+        <h1>My Todo(s) ip {myIp} </h1>
         <Input getTodos={this.getTodos} />
         <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
       </div>
