@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Input from './Input';
 import ListTodo from './ListTodo';
-axios.defaults.baseURL=process.env.BASEURL
+axios.defaults.baseURL=process.env.BASEURL||"http://52.87.164.240:5000"
 
 
 class Todo extends Component {
