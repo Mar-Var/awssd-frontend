@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Input from './Input';
 import ListTodo from './ListTodo';
-require("dotenv")
 axios.defaults.baseURL=process.env.BASEURL||'http://34.207.123.89:5000'
 
 
